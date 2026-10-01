@@ -17,10 +17,7 @@ Designed with a **Copy & Paste** philosophy. You don't install this library; you
 Keep the component CSS files organized within your project's public or static assets folder:
 
 ```text
-public/
-└── css/
-    ├── global.css          # Global CSS variables and resets
-    └── components/
-        ├── ui-input.css    # Styles for input fields
-        ├── ui-radio.css    # Styles for radio buttons
-        └── ui-date.css     # Styles for date pickers
+components/
+        ├── input/    # Styles for input fields
+        ├── radio    # Styles for radio buttons
+        └── datepicker     # Styles for date pickers
