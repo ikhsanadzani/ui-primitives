@@ -1,0 +1,11 @@
+.inp-wrap {
+  --accent: #000000; --border: #a1a1aa; --text: #000000; --text-muted: #a1a1aa;
+  font-family: 'Cabinet Grotesk', sans-serif; display: flex; flex-direction: column; gap: 8px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--accent); }
+.inp-box input {
+  width: 100%; padding: 8px 0; font-size: 1.125rem; border: none; background: transparent;
+  border-bottom: 2px dashed var(--border); color: var(--text); outline: none; transition: border 0.2s ease;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { border-bottom: 2px solid var(--accent); }
