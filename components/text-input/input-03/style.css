@@ -1,0 +1,13 @@
+.inp-wrap {
+  --bg-hover: #f4f4f5; --bg-focus: #e4e4e7; --accent: #09090b; --text: #09090b; --text-muted: #a1a1aa; --radius: 6px;
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); padding-left: 8px; }
+.inp-box input {
+  width: 100%; padding: 10px 8px; font-size: 0.9375rem; border: none; border-radius: var(--radius);
+  background: transparent; color: var(--text); outline: none; transition: background 0.2s ease, transform 0.1s;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:hover { background: var(--bg-hover); }
+.inp-box input:focus { background: var(--bg-focus); }
+.inp-box input:active { transform: scale(0.99); }
