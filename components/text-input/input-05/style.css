@@ -1,0 +1,14 @@
+.inp-wrap {
+  --accent: #10b981; --border: #e4e4e7; --text: #09090b; --text-muted: #a1a1aa;
+  font-family: 'Outfit', sans-serif; display: flex; flex-direction: column; gap: 2px; max-width: 320px;
+  position: relative; padding-left: 16px;
+}
+.inp-wrap::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--border);
+  transform-origin: top; transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inp-wrap:focus-within::before { background: var(--accent); transform: scaleY(1); }
+.inp-lbl { font-size: 0.8125rem; color: var(--text-muted); transition: color 0.2s; }
+.inp-wrap:focus-within .inp-lbl { color: var(--accent); }
+.inp-box input { width: 100%; padding: 4px 0; font-size: 1rem; font-weight: 500; border: none; background: transparent; color: var(--text); outline: none; }
+.inp-box input::placeholder { color: var(--text-muted); font-weight: 400; }
