@@ -1,0 +1,12 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #e4e4e7; --border-focus: #18181b; --ring: rgba(24, 24, 27, 0.1);
+  --text: #09090b; --text-muted: #71717a; --radius: 6px;
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.8125rem; font-weight: 500; color: var(--text); }
+.inp-box input {
+  width: 100%; padding: 8px 12px; font-size: 0.875rem; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); outline: none; transition: all 0.2s ease;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { border-color: var(--border-focus); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 3px var(--ring); }
