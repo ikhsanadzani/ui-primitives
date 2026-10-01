@@ -1,0 +1,17 @@
+.inp-wrap {
+  --bg: transparent; --accent: #18181b; --border: #d4d4d8; --text: #18181b; --text-muted: #a1a1aa;
+  font-family: 'Satoshi', sans-serif; display: flex; flex-direction: column; gap: 4px; max-width: 320px;
+}
+.inp-box { position: relative; padding-top: 16px; }
+.inp-box input {
+  width: 100%; border: none; border-bottom: 1px solid var(--border); background: var(--bg);
+  padding: 8px 0; font-size: 1rem; color: var(--text); outline: none; transition: border-color 0.3s ease;
+}
+.inp-lbl {
+  position: absolute; left: 0; top: 24px; font-size: 1rem; color: var(--text-muted); pointer-events: none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: 0; font-size: 0.75rem; color: var(--accent); font-weight: 500;
+}
+.inp-box input:focus { border-bottom-color: var(--accent); }
+.inp-msg { font-size: 0.75rem; color: var(--text-muted); }
