@@ -1,0 +1,17 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #d4d4d8; --border-focus: #3b82f6; --ring: rgba(59, 130, 246, 0.15);
+  --text: #09090b; --text-muted: #a1a1aa; --radius: 8px;
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { display: none; }
+.inp-box { position: relative; display: flex; align-items: center; }
+.inp-icon {
+  position: absolute; left: 14px; font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+  pointer-events: none; user-select: none; transition: color 0.2s;
+}
+.inp-box input {
+  width: 100%; padding: 10px 12px 10px 32px; font-size: 0.875rem; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); outline: none; transition: all 0.2s ease;
+}
+.inp-box input:focus { border-color: var(--border-focus); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 0 0 3px var(--ring); }
+.inp-box input:focus + .inp-icon, .inp-box input:focus-within ~ .inp-icon { color: var(--border-focus); }
