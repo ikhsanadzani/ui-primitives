@@ -1,0 +1,26 @@
+.inp-wrap {
+  --bg: #ffffff;
+  --accent: #09090b;
+  --border: #e4e4e7;
+  --text: #09090b;
+  --text-muted: #71717a;
+  font-family: 'Geist', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 320px;
+}
+.inp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); }
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 8px 0; font-size: 1rem; color: var(--text);
+  background: transparent; border: none; border-bottom: 1px solid var(--border);
+  outline: none; transition: border-color 0.3s ease;
+}
+.inp-box input::placeholder { color: var(--text-muted); opacity: 0.6; }
+.inp-box::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
+  background: var(--accent); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inp-box:focus-within::after { width: 100%; }
+.inp-msg { font-size: 0.75rem; color: var(--text-muted); }
