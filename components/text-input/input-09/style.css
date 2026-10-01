@@ -1,0 +1,11 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #d4d4d8; --border-focus: #0f172a; --ring: rgba(15, 23, 42, 0.1);
+  --text: #0f172a; --text-muted: #64748b; --radius: 8px;
+  font-family: 'Satoshi', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.8125rem; font-weight: 500; color: var(--text); }
+.inp-box input {
+  width: 100%; padding: 10px 14px; font-size: 0.9375rem; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04); outline: none; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.inp-box input:focus { border-color: var(--border-focus); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.01), 0 0 0 3px var(--ring); }
