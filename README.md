@@ -19,5 +19,5 @@ Keep the component CSS files organized within your project's public or static as
 ```text
 components/
         ├── input/    # Styles for input fields
-        ├── radio    # Styles for radio buttons
-        └── datepicker     # Styles for date pickers
+        ├── radio/    # Styles for radio buttons
+        └── datepicker/     # Styles for date pickers
