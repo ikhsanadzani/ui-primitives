@@ -1,0 +1,13 @@
+.inp-wrap {
+  --border: #000000; --text: #000000; --accent: #f97316;
+  font-family: 'Cabinet Grotesk', sans-serif; display: flex; flex-direction: column; gap: 0; max-width: 320px;
+}
+.inp-lbl { font-size: 1.25rem; font-weight: 900; color: var(--text); text-transform: uppercase; letter-spacing: -0.02em; }
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 8px 0; font-size: 2rem; font-weight: 800; color: var(--text);
+  background: transparent; border: none; border-bottom: 4px solid var(--border); outline: none;
+  text-transform: uppercase; transition: border-color 0.2s;
+}
+.inp-box input::placeholder { color: #d4d4d8; }
+.inp-box input:focus { border-bottom-color: var(--accent); }
