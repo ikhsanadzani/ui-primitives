@@ -1,0 +1,17 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #d4d4d8; --border-focus: #059669; --text: #09090b; --text-muted: #71717a; --radius: 8px;
+  font-family: 'Geist', sans-serif; max-width: 320px; position: relative;
+}
+.inp-box { position: relative; display: flex; align-items: center; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); transition: border 0.2s; }
+.inp-icon { padding-left: 12px; font-size: 1rem; color: var(--text-muted); user-select: none; }
+.inp-box input {
+  flex: 1; padding: 12px 12px 12px 4px; font-size: 1rem; color: var(--text); background: transparent; border: none; outline: none;
+}
+.inp-lbl {
+  position: absolute; left: 12px; top: 12px; padding: 0 4px; font-size: 1rem; color: var(--text-muted); background: var(--bg); pointer-events: none; transition: all 0.2s ease;
+}
+.inp-box:focus-within { border-color: var(--border-focus); box-shadow: 0 0 0 1px var(--border-focus); }
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: -10px; left: 10px; font-size: 0.75rem; font-weight: 500; color: var(--border-focus);
+}
+.inp-box input:not(:placeholder-shown):not(:focus) ~ .inp-lbl { color: var(--text-muted); }
