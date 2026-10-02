@@ -1,0 +1,22 @@
+.inp-wrap {
+  --bg: transparent; --border: #d4d4d8; --border-focus: #0ea5e9; --text: #09090b; --text-muted: #71717a;
+  font-family: 'Geist', sans-serif; max-width: 320px;
+}
+.inp-box { position: relative; padding-top: 8px; }
+.inp-box input {
+  width: 100%; padding: 12px; font-size: 1rem; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; outline: none; transition: border 0.2s;
+}
+.inp-lbl {
+  position: absolute; left: 12px; top: 20px; font-size: 1rem; color: var(--text-muted); pointer-events: none; transition: all 0.2s; padding: 0 4px; z-index: 1;
+}
+.inp-border {
+  position: absolute; left: 12px; top: 8px; height: 2px; width: 0; background: #ffffff; z-index: 0; transition: width 0.2s;
+}
+.inp-box input:focus { border-color: var(--border-focus); box-shadow: 0 0 0 1px var(--border-focus); }
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: 0; font-size: 0.75rem; color: var(--border-focus);
+}
+.inp-box input:focus ~ .inp-border, .inp-box input:not(:placeholder-shown) ~ .inp-border {
+  width: 60px;
+}
+.inp-box input:not(:placeholder-shown):not(:focus) ~ .inp-lbl { color: var(--text-muted); }
