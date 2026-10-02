@@ -1,0 +1,19 @@
+.inp-wrap {
+  --border: #000000; --text: #000000; --bg: #ffffff; --bg-prefix: #cbd5e1;
+  font-family: 'Cabinet Grotesk', monospace; display: flex; flex-direction: column; gap: 8px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.875rem; font-weight: 700; color: var(--text); }
+.inp-box {
+  display: flex; border: 3px solid var(--border); box-shadow: 4px 4px 0px 0px var(--border);
+  transition: all 0.15s ease; background: var(--bg);
+}
+.inp-box:focus-within { transform: translate(4px, 4px); box-shadow: 0px 0px 0px 0px var(--border); }
+.inp-prefix {
+  padding: 12px 16px; font-weight: 800; background: var(--bg-prefix); border-right: 3px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.inp-box input {
+  flex: 1; padding: 12px 16px; font-size: 1.125rem; font-weight: 700; color: var(--text);
+  background: transparent; border: none; outline: none; -moz-appearance: textfield;
+}
+.inp-box input::-webkit-outer-spin-button, .inp-box input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
