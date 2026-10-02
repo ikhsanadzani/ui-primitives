@@ -1,0 +1,18 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #d4d4d8; --border-focus: #18181b; --text: #18181b; --text-muted: #71717a; --radius: 6px;
+  font-family: 'Geist', sans-serif; max-width: 320px; position: relative;
+}
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 12px 14px; font-size: 1rem; color: var(--text); background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius); outline: none; transition: border-color 0.2s;
+}
+.inp-lbl {
+  position: absolute; left: 10px; top: 12px; padding: 0 4px; font-size: 1rem; color: var(--text-muted);
+  background: var(--bg); pointer-events: none; transition: all 0.2s ease;
+}
+.inp-box input:focus { border-color: var(--border-focus); box-shadow: 0 0 0 1px var(--border-focus); }
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: -8px; font-size: 0.75rem; font-weight: 500; color: var(--border-focus);
+}
+.inp-box input:not(:placeholder-shown):not(:focus) ~ .inp-lbl { color: var(--text-muted); }
