@@ -1,0 +1,15 @@
+.inp-wrap {
+  --glass-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1);
+  --text: #ffffff; --text-muted: rgba(255, 255, 255, 0.5); --shadow: rgba(0, 0, 0, 0.2);
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 8px; max-width: 320px;
+}
+.inp-lbl { display: none; }
+.inp-box input {
+  width: 100%; padding: 12px 24px; font-size: 1rem; color: var(--text);
+  background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border); border-radius: 999px; outline: none;
+  box-shadow: 0 8px 32px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: all 0.3s ease; text-align: center;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { background: rgba(255, 255, 255, 0.08); box-shadow: 0 8px 32px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 2px rgba(255,255,255,0.1); }
