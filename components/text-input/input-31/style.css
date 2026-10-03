@@ -1,0 +1,13 @@
+.inp-wrap {
+  --bg: #000000; --text: #22c55e;
+  font-family: 'JetBrains Mono', 'Courier New', monospace; max-width: 320px;
+  background: var(--bg); padding: 12px; border-radius: 4px;
+}
+.inp-box { display: flex; align-items: center; }
+.inp-prompt { color: var(--text); font-weight: 700; margin-right: 8px; font-size: 0.875rem; white-space: nowrap; }
+.inp-box input {
+  width: 100%; font-size: 0.875rem; color: var(--text); background: transparent;
+  border: none; outline: none; caret-color: var(--text);
+}
+.inp-box input::placeholder { color: #166534; }
+.inp-box input:focus { outline: none; }
