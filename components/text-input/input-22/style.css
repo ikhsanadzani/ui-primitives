@@ -1,0 +1,20 @@
+.inp-wrap {
+  --glass-bg: rgba(0, 0, 0, 0.3); --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-focus: rgba(0, 0, 0, 0.5); --text: #ffffff; --text-muted: rgba(255, 255, 255, 0.6);
+  font-family: 'Geist', sans-serif; max-width: 320px; position: relative;
+}
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 16px 16px 8px; font-size: 1rem; color: var(--text);
+  background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border); border-radius: 8px; outline: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); transition: all 0.3s ease;
+}
+.inp-lbl {
+  position: absolute; left: 16px; top: 14px; font-size: 1rem; color: var(--text-muted);
+  pointer-events: none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inp-box input:focus { background: var(--glass-focus); border-color: rgba(255,255,255,0.3); }
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: 4px; font-size: 0.65rem; color: rgba(255,255,255,0.9); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;
+}
