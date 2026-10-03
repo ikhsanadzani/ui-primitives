@@ -1,0 +1,24 @@
+.inp-wrap {
+  --bg: #e0e5ec; --shadow-light: #ffffff; --shadow-dark: #a3b1c6; --text: #4d4d4d; --text-muted: #9ba7b6; --radius: 999px;
+  background: var(--bg); padding: 24px; border-radius: 16px;
+  font-family: 'Geist', sans-serif; max-width: 320px;
+}
+.inp-box {
+  display: flex; align-items: center; padding: 6px 6px 6px 20px; background: var(--bg);
+  border-radius: var(--radius); box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+.inp-box:focus-within {
+  box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
+}
+.inp-box input {
+  flex: 1; padding: 10px 0; font-size: 1rem; color: var(--text); background: transparent;
+  border: none; outline: none;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-icon {
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); border-radius: 50%; color: var(--text); font-weight: 700;
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+  margin-left: 12px; cursor: default; user-select: none;
+}
