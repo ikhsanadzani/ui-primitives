@@ -1,0 +1,13 @@
+.inp-wrap {
+  --glass-border: rgba(255, 255, 255, 0.15); --glass-focus: rgba(255, 255, 255, 0.3);
+  --text: #ffffff; --text-muted: rgba(255, 255, 255, 0.4);
+  font-family: 'Satoshi', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.8125rem; font-weight: 600; color: var(--text); letter-spacing: 0.02em; }
+.inp-box input {
+  width: 100%; padding: 10px 0; font-size: 1rem; color: var(--text);
+  background: transparent; border: none; border-bottom: 2px solid var(--glass-border);
+  outline: none; transition: border 0.3s ease;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { border-bottom-color: var(--glass-focus); }
