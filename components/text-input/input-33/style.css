@@ -1,0 +1,15 @@
+.inp-wrap {
+  --bg: #c0c0c0; --bg-input: #ffffff; --border-light: #ffffff; --border-dark: #808080; --border-darker: #000000; --text: #000000;
+  font-family: 'MS Sans Serif', 'Tahoma', sans-serif; display: flex; flex-direction: column; gap: 4px; max-width: 320px;
+  background: var(--bg); padding: 16px; /* For testing visibility */
+}
+.inp-lbl { font-size: 0.75rem; color: var(--text); }
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 4px 6px; font-size: 1rem; color: var(--text); background: var(--bg-input);
+  border-style: solid; border-width: 2px;
+  border-top-color: var(--border-dark); border-left-color: var(--border-dark);
+  border-bottom-color: var(--border-light); border-right-color: var(--border-light);
+  outline: none;
+}
+.inp-box input:focus { outline: 1px dotted var(--text); outline-offset: -4px; }
