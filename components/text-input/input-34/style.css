@@ -1,0 +1,13 @@
+.inp-wrap {
+  --bg: #000000; --border: #fbbf24; --text: #ef4444; --text-muted: #451a03;
+  font-family: 'Press Start 2P', 'Courier New', monospace; display: flex; flex-direction: column; gap: 8px; max-width: 320px;
+  background: var(--bg); padding: 24px; text-align: center;
+}
+.inp-lbl { font-size: 1rem; color: #ffffff; letter-spacing: 0.1em; }
+.inp-box input {
+  width: 100%; padding: 12px 0; font-size: 2rem; color: var(--text); background: transparent;
+  border: 4px solid var(--border); outline: none; text-align: center; text-transform: uppercase;
+  caret-color: transparent; /* Arcade machines usually don't show carets */
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { background: #1a1a1a; border-color: #ef4444; color: #fbbf24; }
