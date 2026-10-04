@@ -1,0 +1,12 @@
+.inp-wrap {
+  --bg: #f4f4f5; --bg-focus: #e4e4e7; --text: #09090b; --text-muted: #71717a;
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); padding-left: 16px; }
+.inp-box input {
+  width: 100%; padding: 14px 24px; font-size: 1rem; color: var(--text);
+  background: var(--bg); border: none; border-radius: 999px; outline: none;
+  transition: all 0.2s ease;
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { background: var(--bg-focus); box-shadow: inset 0 0 0 2px #d4d4d8; }
