@@ -1,0 +1,20 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #d4d4d8; --border-focus: #09090b; --text: #09090b;
+  font-family: 'Satoshi', sans-serif; display: flex; flex-direction: column; gap: 6px; max-width: 320px;
+}
+.inp-lbl { font-size: 0.8125rem; font-weight: 600; color: var(--text); padding-left: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.inp-box {
+  display: flex; align-items: center; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 999px; padding: 4px; transition: border 0.2s ease;
+}
+.inp-box:focus-within { border-color: var(--border-focus); }
+.inp-box input {
+  flex: 1; padding: 8px 12px 8px 16px; font-size: 0.9375rem; color: var(--text);
+  background: transparent; border: none; outline: none;
+}
+.inp-box input::placeholder { color: #a1a1aa; }
+.inp-btn {
+  background: var(--text); color: #ffffff; border: none; border-radius: 999px;
+  padding: 8px 16px; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: transform 0.1s;
+}
+.inp-btn:active { transform: scale(0.95); }
