@@ -1,0 +1,24 @@
+
+.dp-wrap {
+  --bg: #000000; --accent: #22c55e; --text: #22c55e;
+  display: flex; flex-direction: column; gap: 4px; width: 220px; font-family: 'VT323', monospace;
+}
+.dp-lbl { font-size: 1.1rem; color: var(--text); text-transform: uppercase; }
+.dp-box {
+  position: relative; border: 1px solid var(--accent); padding: 8px 12px;
+  background: rgba(34, 197, 94, 0.05); transition: all 0.2s;
+}
+.dp-box:focus-within { background: rgba(34, 197, 94, 0.15); box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); }
+.dp-input {
+  width: 100%; font-size: 1.2rem; color: var(--text); background: transparent;
+  border: none; outline: none; color-scheme: dark; accent-color: var(--accent); font-family: inherit;
+}
+.dp-input::-webkit-calendar-picker-indicator {
+  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(85deg); /* Tint the native icon green */
+  cursor: pointer;
+}
+.dp-input:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+.dp-input:disabled { cursor: not-allowed; opacity: 0.4; }
+.dp-input:user-invalid { color: #ef4444; }
+@media (prefers-reduced-motion: reduce) { .dp-box { transition: none; } }
+/* Always dark terminal style */

@@ -1,0 +1,73 @@
+
+.dp-wrap {
+  --bg: #ffffff;
+  --accent: #09090b;
+  --border: #e4e4e7;
+  --text: #09090b;
+  --text-muted: #71717a;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 240px;
+  font-family: 'Geist', sans-serif;
+}
+.dp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); }
+.dp-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--border);
+  transition: all 0.2s ease;
+}
+.dp-box:focus-within { border-bottom-color: var(--accent); }
+.dp-input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  outline: none;
+  color-scheme: light;
+  accent-color: var(--accent);
+  font-family: inherit;
+}
+.dp-input:disabled { color: var(--text-muted); cursor: not-allowed; }
+.dp-box:has(.dp-input:disabled) { opacity: 0.5; }
+.dp-input:user-invalid { color: #ef4444; }
+.dp-icon {
+  position: absolute;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+  background-size: cover;
+  color: var(--text-muted);
+}
+/* Hide WebKit indicator, expand it to cover the input for easier tapping, Firefox keeps native */
+.dp-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0; top: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.dp-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dp-box { transition: none; }
+}
+@media (prefers-color-scheme: dark) {
+  .dp-wrap {
+    --bg: #09090b;
+    --accent: #ffffff;
+    --border: #27272a;
+    --text: #f4f4f5;
+    --text-muted: #a1a1aa;
+  }
+  .dp-input { color-scheme: dark; }
+}

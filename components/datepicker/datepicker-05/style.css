@@ -1,0 +1,30 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #09090b; --border: #e4e4e7; --text: #09090b; --text-muted: #71717a;
+  width: 220px; font-family: 'Geist', sans-serif;
+}
+.dp-box {
+  position: relative; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 999px; padding: 8px 16px; transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.dp-box:focus-within { border-color: var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.dp-input {
+  width: 100%; font-size: 0.95rem; color: var(--text); background: transparent;
+  border: none; outline: none; color-scheme: light; accent-color: var(--accent); font-family: inherit;
+}
+.dp-input:disabled { cursor: not-allowed; opacity: 0.5; }
+.dp-icon {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  width: 16px; height: 16px; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E"); background-size: cover; opacity: 0.5;
+}
+.dp-input::-webkit-calendar-picker-indicator {
+  position: absolute; right: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;
+}
+.dp-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) { .dp-box { transition: none; } }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: #18181b; --accent: #ffffff; --border: #3f3f46; --text: #f4f4f5; }
+  .dp-input { color-scheme: dark; }
+}

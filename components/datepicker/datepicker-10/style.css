@@ -1,0 +1,22 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #2563eb; --border: #cbd5e1; --text: #1e293b; --text-muted: #64748b;
+  display: flex; align-items: center; gap: 8px; font-family: 'Geist', sans-serif;
+}
+.dp-lbl { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+.dp-box {
+  position: relative; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.dp-box:focus-within { border-color: var(--accent); }
+.dp-input {
+  padding: 4px 6px; font-size: 0.8125rem; color: var(--text); background: transparent;
+  border: none; outline: none; color-scheme: light; accent-color: var(--accent); font-family: inherit;
+}
+.dp-input::-webkit-calendar-picker-indicator { cursor: pointer; padding-left: 4px; }
+.dp-input:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; border-radius: 4px; }
+.dp-input:disabled { cursor: not-allowed; opacity: 0.5; }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: #1e293b; --border: #334155; --text: #f8fafc; --text-muted: #94a3b8; }
+  .dp-input { color-scheme: dark; }
+}
