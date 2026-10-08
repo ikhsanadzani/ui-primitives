@@ -1,0 +1,27 @@
+.rad-group {
+  --accent: #6366f1; --border: #e2e8f0; --bg: #ffffff; --text: #0f172a; --text-muted: #64748b;
+  font-family: 'Outfit', sans-serif; display: flex; gap: 16px;
+}
+.rad-item { cursor: pointer; user-select: none; }
+.rad-ctrl { position: absolute; opacity: 0; width: 0; height: 0; }
+.rad-card {
+  display: flex; flex-direction: column; align-items: center; padding: 24px 32px;
+  background: var(--bg); border: 2px solid var(--border); border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.2s;
+}
+.rad-item:has(.rad-ctrl:checked) .rad-card {
+  border-color: var(--accent); background: #f8fafc; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+.rad-dot {
+  width: 20px; height: 20px; border: 2px solid var(--border); border-radius: 50%;
+  margin-bottom: 12px; position: relative; transition: all 0.2s;
+}
+.rad-dot::after {
+  content: ''; position: absolute; inset: 3px; background: var(--accent); border-radius: 50%;
+  transform: scale(0); transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.rad-item:has(.rad-ctrl:checked) .rad-dot { border-color: var(--accent); }
+.rad-item:has(.rad-ctrl:checked) .rad-dot::after { transform: scale(1); }
+.rad-lbl { font-size: 1rem; font-weight: 500; color: var(--text-muted); margin-bottom: 4px; }
+.rad-item:has(.rad-ctrl:checked) .rad-lbl { color: var(--accent); font-weight: 600; }
+.rad-price { font-size: 1.5rem; font-weight: 700; color: var(--text); }

@@ -1,0 +1,20 @@
+.rad-group {
+  --bg: #f1f5f9; --active: #ffffff; --text: #475569; --text-active: #0f172a;
+  font-family: 'Geist', sans-serif; display: inline-flex; background: var(--bg);
+  padding: 4px; border-radius: 8px;
+}
+.rad-item { cursor: pointer; user-select: none; position: relative; }
+.rad-ctrl { position: absolute; opacity: 0; width: 0; height: 0; }
+.rad-lbl {
+  display: flex; align-items: center; justify-content: center; padding: 6px 16px;
+  font-size: 0.875rem; font-weight: 500; color: var(--text);
+  border-radius: 6px; transition: all 0.2s ease;
+}
+.rad-ctrl:checked + .rad-lbl {
+  background: var(--active); color: var(--text-active);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+}
+.rad-badge {
+  background: #10b981; color: #ffffff; font-size: 0.625rem; font-weight: 700;
+  padding: 2px 6px; border-radius: 999px; margin-left: 6px;
+}

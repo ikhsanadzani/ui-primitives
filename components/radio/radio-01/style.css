@@ -1,0 +1,21 @@
+.rad-group {
+  --accent: #09090b; --border: #d4d4d8; --text: #09090b;
+  font-family: 'Geist', sans-serif; display: flex; flex-direction: column; gap: 12px;
+}
+.rad-item {
+  display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
+}
+.rad-ctrl {
+  position: absolute; opacity: 0; width: 0; height: 0;
+}
+.rad-dot {
+  width: 16px; height: 16px; border: 1px solid var(--border); border-radius: 50%;
+  position: relative; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center;
+}
+.rad-dot::after {
+  content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
+  transform: scale(0); transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rad-ctrl:checked + .rad-dot { border-color: var(--accent); }
+.rad-ctrl:checked + .rad-dot::after { transform: scale(1); }
+.rad-lbl { font-size: 0.875rem; color: var(--text); }

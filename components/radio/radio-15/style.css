@@ -1,0 +1,23 @@
+.rad-group {
+  --primary: #6750A4; --surface: #F3EDF7; --surface-active: #E8DEF8; --text: #1D1B20;
+  font-family: 'Roboto', 'Geist', sans-serif; display: flex; gap: 12px;
+}
+.rad-item { cursor: pointer; user-select: none; }
+.rad-ctrl { position: absolute; opacity: 0; width: 0; height: 0; }
+.rad-card {
+  display: flex; align-items: center; gap: 12px; padding: 16px 24px;
+  background: var(--surface); border-radius: 12px; transition: all 0.2s;
+}
+.rad-item:hover .rad-card { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.rad-ctrl:checked ~ .rad-card { background: var(--surface-active); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.rad-dot {
+  width: 20px; height: 20px; border: 2px solid #49454F; border-radius: 50%;
+  position: relative; transition: all 0.2s;
+}
+.rad-dot::after {
+  content: ''; position: absolute; inset: 2px; background: var(--primary); border-radius: 50%;
+  transform: scale(0); transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+.rad-ctrl:checked ~ .rad-card .rad-dot { border-color: var(--primary); }
+.rad-ctrl:checked ~ .rad-card .rad-dot::after { transform: scale(1); }
+.rad-lbl { font-size: 1rem; font-weight: 500; color: var(--text); }
