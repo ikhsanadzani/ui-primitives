@@ -1,0 +1,13 @@
+.inp-wrap {
+  --bg: #e4e4e6; --text: #000000; --text-muted: #8e8e93;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  max-width: 320px; padding: 8px 16px;
+}
+.inp-box { position: relative; }
+.inp-box input {
+  width: 100%; padding: 8px 16px; font-size: 1.0625rem; color: var(--text);
+  background: var(--bg); border: none; border-radius: 10px; outline: none;
+  text-align: center; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.inp-box input::placeholder { color: var(--text-muted); }
+.inp-box input:focus { text-align: left; background: #d1d1d6; }
