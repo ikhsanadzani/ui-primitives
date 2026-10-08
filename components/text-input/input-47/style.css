@@ -1,0 +1,14 @@
+.inp-wrap {
+  --text: #3f3f46; --border: #d4d4d8; --border-focus: #09090b;
+  font-family: 'Geist', sans-serif; display: flex; align-items: center; justify-content: space-between;
+  width: 240px; padding: 4px 8px; border-bottom: 1px solid #e4e4e7;
+}
+.inp-lbl { font-size: 0.75rem; font-weight: 500; color: var(--text); }
+.inp-box { width: 80px; }
+.inp-box input {
+  width: 100%; padding: 2px 6px; font-size: 0.75rem; font-family: 'Geist Mono', monospace;
+  color: #09090b; background: #f4f4f5; border: 1px solid transparent; border-radius: 4px; outline: none;
+  text-align: right; transition: all 0.15s; -moz-appearance: textfield;
+}
+.inp-box input::-webkit-outer-spin-button, .inp-box input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.inp-box input:focus { border-color: var(--border-focus); background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
