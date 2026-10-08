@@ -10,7 +10,7 @@ Designed with a **Copy & Paste** philosophy. You don't install this library; you
 |---|---|
 | Text Input | 50/50 |
 | Radio | 15/50 |
-| Datepicker | 0/50 |
+| Datepicker | 50/50 |
 
 ## Features
 
@@ -23,7 +23,10 @@ Designed with a **Copy & Paste** philosophy. You don't install this library; you
 ## Browser support
 
 *   Components using `:has()` require Chrome/Edge 105+, Safari 15.4+, Firefox 121+.
-*   Datepicker notes: Native date popups are rendered by the browser and cannot be themed.
+
+## Datepicker notes
+*   Native popups are not themeable (they rely on the OS and browser implementation).
+*   Popover calendars do not auto-close and the trigger mirror only covers the demo month(s), so for real data generate the day markup server-side (PHP/Laravel/Django templates) or add your own enhancement.
 
 ## Recommended Structure
 
