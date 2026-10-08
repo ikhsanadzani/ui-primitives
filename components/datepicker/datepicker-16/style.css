@@ -1,0 +1,25 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #2563eb; --border: #cbd5e1; --text: #0f172a; --text-muted: #64748b;
+  margin: 0; padding: 0; border: none; font-family: 'Geist', sans-serif;
+}
+.dp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.dp-box {
+  display: flex; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 6px; overflow: hidden; transition: border-color 0.2s;
+}
+.dp-box:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.dp-sel {
+  appearance: none; -webkit-appearance: none; background: transparent;
+  border: none; outline: none; padding: 10px 16px; font-size: 0.95rem; color: var(--text);
+  font-family: inherit; cursor: pointer; color-scheme: light;
+}
+.dp-sel:invalid { color: var(--text-muted); }
+.dp-sel:focus-visible { background: #f1f5f9; }
+.dp-div { width: 1px; background: var(--border); }
+@media (prefers-reduced-motion: reduce) { .dp-box { transition: none; } }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: #0f172a; --border: #1e293b; --text: #f8fafc; --text-muted: #94a3b8; }
+  .dp-sel { color-scheme: dark; }
+  .dp-sel:focus-visible { background: #1e293b; }
+}

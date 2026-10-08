@@ -1,0 +1,24 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #f43f5e; --border: #cbd5e1; --text: #0f172a; --text-muted: #64748b;
+  margin: 0; padding: 0; border: none; font-family: 'Geist', sans-serif; width: max-content;
+}
+.dp-lbl { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+.dp-box {
+  display: flex; align-items: center; background: var(--bg); border-bottom: 2px solid var(--border);
+  padding: 4px 8px; transition: border-color 0.2s;
+}
+.dp-box:focus-within { border-color: var(--accent); }
+.dp-sel {
+  appearance: none; -webkit-appearance: none; background: transparent;
+  border: none; outline: none; font-size: 1.1rem; color: var(--text);
+  font-family: inherit; cursor: pointer; color-scheme: light; text-align: center;
+}
+.dp-sel:invalid { color: var(--text-muted); }
+.dp-sel:focus-visible { color: var(--accent); text-decoration: underline; }
+.dp-sep { color: var(--text-muted); margin: 0 4px; font-size: 1.2rem; font-weight: 300; }
+@media (prefers-reduced-motion: reduce) { .dp-box { transition: none; } }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: transparent; --border: #334155; --text: #f8fafc; }
+  .dp-sel { color-scheme: dark; }
+}

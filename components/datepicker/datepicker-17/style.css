@@ -1,0 +1,24 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #10b981; --border: #e2e8f0; --text: #0f172a; --text-muted: #94a3b8;
+  margin: 0; padding: 0; border: none; font-family: 'Geist', sans-serif;
+}
+.dp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.dp-box {
+  display: flex; align-items: center; gap: 8px; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 16px;
+}
+.dp-box:focus-within { border-color: var(--accent); }
+.dp-inp {
+  background: transparent; border: none; outline: none; font-size: 1rem; color: var(--text);
+  text-align: center; font-family: inherit;
+}
+.dp-inp::placeholder { color: var(--text-muted); }
+.dp-w2 { width: 2.2ch; }
+.dp-w4 { width: 4.5ch; }
+.dp-sep { color: var(--text-muted); user-select: none; font-size: 1.1rem; font-weight: 300; }
+.dp-inp:focus-visible { border-bottom: 2px solid var(--accent); margin-bottom: -2px; }
+@media (prefers-reduced-motion: reduce) { .dp-box { transition: none; } }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: #0f172a; --border: #1e293b; --text: #f8fafc; --text-muted: #64748b; }
+}

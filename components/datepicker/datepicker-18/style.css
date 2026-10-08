@@ -1,0 +1,18 @@
+
+.dp-wrap {
+  --bg: #ffffff; --accent: #6366f1; --border: #cbd5e1; --text: #0f172a;
+  margin: 0; padding: 0; border: none; font-family: 'Geist', sans-serif;
+}
+.dp-lbl { font-size: 0.875rem; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.dp-box { display: flex; gap: 12px; }
+.dp-grp { display: flex; gap: 4px; }
+.dp-inp {
+  width: 32px; height: 40px; text-align: center; font-size: 1.1rem; font-weight: 600;
+  color: var(--text); background: var(--bg); border: 1px solid var(--border);
+  border-radius: 6px; outline: none; transition: all 0.2s;
+}
+.dp-inp:focus-visible { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(99,102,241,0.2); transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .dp-inp { transition: none; } .dp-inp:focus-visible { transform: none; } }
+@media (prefers-color-scheme: dark) {
+  .dp-wrap { --bg: #0f172a; --border: #334155; --text: #f8fafc; }
+}
