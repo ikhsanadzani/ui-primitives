@@ -1,0 +1,16 @@
+.inp-wrap {
+  --bg: #ffffff; --border: #e4e4e7; --border-focus: #09090b; --text: #09090b; --text-muted: #a1a1aa;
+  font-family: 'Geist Mono', monospace; max-width: 100px;
+}
+.inp-box {
+  display: flex; align-items: center; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 4px; padding: 0 6px; transition: border 0.2s ease;
+}
+.inp-box:focus-within { border-color: var(--border-focus); }
+.inp-box input {
+  flex: 1; min-width: 0; padding: 4px 0; font-size: 0.75rem; color: var(--text);
+  background: transparent; border: none; outline: none; text-align: right;
+  -moz-appearance: textfield;
+}
+.inp-box input::-webkit-outer-spin-button, .inp-box input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.inp-suffix { font-size: 0.75rem; color: var(--text-muted); margin-left: 4px; user-select: none; }
