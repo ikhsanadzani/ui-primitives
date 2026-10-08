@@ -1,0 +1,19 @@
+.inp-wrap {
+  --border: #e5e5ea; --border-focus: #000000; --text: #000000; --text-muted: #8e8e93;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  max-width: 320px;
+}
+.inp-box { position: relative; padding-top: 16px; }
+.inp-box input {
+  width: 100%; padding: 8px 0; font-size: 1.5rem; font-weight: 600; color: var(--text);
+  background: transparent; border: none; border-bottom: 2px solid var(--border); outline: none;
+  transition: border 0.3s;
+}
+.inp-lbl {
+  position: absolute; left: 0; top: 24px; font-size: 1.5rem; font-weight: 600; color: var(--text-muted);
+  pointer-events: none; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.inp-box input:focus { border-bottom-color: var(--border-focus); }
+.inp-box input:focus ~ .inp-lbl, .inp-box input:not(:placeholder-shown) ~ .inp-lbl {
+  top: 0; font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+}
