@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datepicker 49</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f8fafc; font-family: 'Geist', sans-serif; }
+  </style>
+</head>
+<body>
+
+
+<div class="dp-card">
+  <div class="dp-head">
+    <div class="dp-title">October 2026</div>
+    <div class="dp-navs">
+      <button type="button" class="dp-nav">&lsaquo;</button>
+      <button type="button" class="dp-nav">&rsaquo;</button>
+    </div>
+  </div>
+  <div class="dp-row" role="radiogroup" aria-label="Select day">
+    <label class="dp-day"><input type="radio" class="dp-ctrl" name="dp49-d" value="12"><div class="dp-col"><span class="dp-dw">Mo</span><span class="dp-num">12</span></div></label>
+    <label class="dp-day"><input type="radio" class="dp-ctrl" name="dp49-d" value="13"><div class="dp-col"><span class="dp-dw">Tu</span><span class="dp-num">13</span></div></label>
+    <label class="dp-day dp-today"><input type="radio" class="dp-ctrl" name="dp49-d" value="14" checked><div class="dp-col"><span class="dp-dw">We</span><span class="dp-num">14</span></div></label>
+    <label class="dp-day"><input type="radio" class="dp-ctrl" name="dp49-d" value="15"><div class="dp-col"><span class="dp-dw">Th</span><span class="dp-num">15</span></div></label>
+    <label class="dp-day"><input type="radio" class="dp-ctrl" name="dp49-d" value="16"><div class="dp-col"><span class="dp-dw">Fr</span><span class="dp-num">16</span></div></label>
+  </div>
+  <div class="dp-div"></div>
+  <div class="dp-title dp-sub">Available Times</div>
+  <div class="dp-tgrid" role="radiogroup" aria-label="Select time">
+    <label class="dp-tcell"><input type="radio" class="dp-ctrl" name="dp49-t" value="09:00"><span class="dp-tlbl">09:00</span></label>
+    <label class="dp-tcell"><input type="radio" class="dp-ctrl" name="dp49-t" value="10:00" checked><span class="dp-tlbl">10:00</span></label>
+    <label class="dp-tcell"><input type="radio" class="dp-ctrl" name="dp49-t" value="11:00"><span class="dp-tlbl">11:00</span></label>
+    <label class="dp-tcell"><input type="radio" class="dp-ctrl" name="dp49-t" value="13:00"><span class="dp-tlbl">13:00</span></label>
+    <label class="dp-tcell disabled"><input type="radio" class="dp-ctrl" name="dp49-t" value="14:00" disabled><span class="dp-tlbl">14:00</span></label>
+    <label class="dp-tcell"><input type="radio" class="dp-ctrl" name="dp49-t" value="15:00"><span class="dp-tlbl">15:00</span></label>
+  </div>
+</div>
+
+
+</body>
+</html>

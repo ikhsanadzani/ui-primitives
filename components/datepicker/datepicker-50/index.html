@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datepicker 50</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f8fafc; font-family: 'Geist', sans-serif; }
+  </style>
+</head>
+<body>
+
+
+<div class="dp-wrap">
+  <div class="dp-lbl-main">Due Date</div>
+  <div class="dp-chips" role="radiogroup" aria-label="Select quick date">
+    <label class="dp-chip"><input type="radio" class="dp-ctrl" name="dp50" value="today" checked><span class="dp-lbl">Today</span></label>
+    <label class="dp-chip"><input type="radio" class="dp-ctrl" name="dp50" value="tomorrow"><span class="dp-lbl">Tomorrow</span></label>
+    <label class="dp-chip"><input type="radio" class="dp-ctrl" name="dp50" value="next-week"><span class="dp-lbl">Next week</span></label>
+    <label class="dp-chip">
+      <input type="radio" class="dp-ctrl dp-other-ctrl" name="dp50" id="dp50-other">
+      <span class="dp-lbl">Other</span>
+    </label>
+  </div>
+  <div class="dp-custom">
+    <input type="date" class="dp-input" aria-label="Custom date">
+  </div>
+</div>
+
+
+</body>
+</html>
